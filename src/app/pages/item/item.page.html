@@ -1,0 +1,31 @@
+<ion-header>
+    <ion-toolbar color='danger'>
+        <ion-buttons slot="start">
+           <ion-button routerLink='/' routerDirection='back' >
+            <ion-icon name="arrow-back-outline"></ion-icon>
+        </ion-button> 
+        </ion-buttons>
+        
+        <ion-title slot="end" >MY Item</ion-title>
+    </ion-toolbar>
+</ion-header>
+<ion-content>
+<ion-card>
+    <ion-card-header>
+        <ion-card-title>
+           {{item.title}}
+        </ion-card-title>
+        <ion-card-subtitle>
+            {{item.createdAt}}
+        </ion-card-subtitle>
+    </ion-card-header>
+    <ion-card-content>
+        <ion-text>
+        <p>{{item.content}} </p>
+    </ion-text> 
+    </ion-card-content>
+      
+</ion-card>
+
+<ion-button color='danger' (click)='delete()'>Delete</ion-button>
+</ion-content>

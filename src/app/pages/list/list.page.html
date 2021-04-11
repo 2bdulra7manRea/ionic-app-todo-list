@@ -1,0 +1,39 @@
+<ion-header >
+  <ion-toolbar color='danger' > 
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/"></ion-back-button>
+    </ion-buttons>
+    <ion-title>My List</ion-title>
+
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+<ion-fab  vertical='bottom'   horizontal='end'  slot="fixed" >
+  <ion-fab-button routerLink='/add' color='danger'  >
+    <ion-icon name="folder-outline"></ion-icon>
+  </ion-fab-button>
+</ion-fab>
+
+<ion-searchbar [(ngModel)]="searchvalue"  name='search'></ion-searchbar>
+<ion-list>
+<ion-card *ngFor="let item of Search();  let i = index " [routerLink]="['/item',i]" >
+  <ion-card-header>
+    <ion-card-subtitle>{{item.createdAt}}</ion-card-subtitle>
+    <ion-card-title>{{item.title}}</ion-card-title>
+  </ion-card-header>
+<ion-card-content>
+{{item.content.slice(0,20)}}
+</ion-card-content>
+</ion-card>
+</ion-list>
+
+
+
+
+
+
+
+
+</ion-content>

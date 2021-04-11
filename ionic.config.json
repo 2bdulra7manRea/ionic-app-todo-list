@@ -1,7 +1,8 @@
 {
   "name": "niceApp",
   "integrations": {
-    "capacitor": {}
+    "capacitor": {},
+    "cordova": {}
   },
   "type": "angular"
 }
